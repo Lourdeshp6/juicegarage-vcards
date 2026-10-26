@@ -1,0 +1,13 @@
+JUICE GARAGE SL — SISTEMA VCARDS
+
+1. Abre index.html para ver la tarjeta de Marc.
+2. El QR qr-marc-contacto.png contiene una vCard y permite importar el contacto sin alojar una web. No es un QR de URL editable.
+3. El logotipo facilitado ya esta incluido como logo-oficial.png. El estilo corporativo es blanco, negro y grises, sin naranja.
+4. Publica todos los archivos en un hosting HTTPS bajo una URL estable de tu dominio.
+5. Una vez publicada la URL definitiva, genera OTRO QR que apunte a esa URL. Ese QR se mantiene aunque edites el contenido de la web.
+6. empleados.json es el registro inicial del equipo. Para otros trabajadores se deben crear sus páginas y archivos VCF, sin inventar datos.
+7. El directorio.html necesita hosting web para leer empleados.json; abrirlo como archivo local puede bloquear fetch.
+8. No hay panel de administración online ni sincronización automática en esta versión. Las actualizaciones se hacen editando archivos y volviendo a publicarlos. Para panel privado multiusuario hace falta backend, autenticación y hosting.
+9. Si cambias datos, actualiza tanto HTML como VCF; el QR directo de vCard debe regenerarse.
+
+10. La direccion postal se ha eliminado del HTML, VCF, JSON y QR. Podra incorporarse mas adelante.
