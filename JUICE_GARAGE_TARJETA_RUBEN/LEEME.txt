@@ -1,0 +1,7 @@
+JUICE GARAGE SL - TARJETA RUBEN QUERALT VERDU
+
+Sube la carpeta ruben-queralt-verdu completa a la RAIZ del repositorio juicegarage-vcards en GitHub, sin modificar el index.html de Marc.
+La carpeta debe quedar: juicegarage-vcards/ruben-queralt-verdu/index.html
+Enlace previsto una vez publicado: https://lourdeshp6.github.io/juicegarage-vcards/ruben-queralt-verdu/
+El QR permanente apunta a ese enlace. No imprimir hasta verificar que la tarjeta abre.
+El telefono no se ha identificado expresamente como WhatsApp; por eso no se incluye boton de WhatsApp.
