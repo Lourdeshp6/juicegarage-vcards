@@ -1,10 +1,11 @@
+
 BEGIN:VCARD
 VERSION:3.0
 N:Raventós Cobo;Marc;;;
-FN:MARC RAVENTÓS COBO
+FN:Marc Raventós Cobo
 ORG:JUICE GARAGE SL
 TITLE:Fundador | Innovación y Desarrollo de Producto
-TEL;TYPE=CELL,VOICE:+34682408287
-EMAIL;TYPE=INTERNET,WORK:marc.r@juicegarage.es
+TEL;TYPE=CELL:+34637408287
+EMAIL;TYPE=INTERNET:marc.r@juicegarage.es
 URL:https://www.sucs.es
 END:VCARD
