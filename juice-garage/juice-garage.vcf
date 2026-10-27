@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;JUICE GARAGE SL;;;
+FN:JUICE GARAGE SL
+ORG:JUICE GARAGE SL
+TEL;TYPE=WORK,VOICE;X-ABLabel=Marc - Direccion e Innovacion:+34637408287
+TEL;TYPE=WORK,VOICE;X-ABLabel=Ruben - Direccion Comercial:+34682360380
+TEL;TYPE=WORK,VOICE;X-ABLabel=Administracion:+34604486190
+EMAIL;TYPE=WORK:admin@juicegarage.es
+URL:https://www.sucs.es
+END:VCARD
