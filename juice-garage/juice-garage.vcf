@@ -1,11 +1,21 @@
+
 BEGIN:VCARD
 VERSION:3.0
 N:;JUICE GARAGE SL;;;
 FN:JUICE GARAGE SL
 ORG:JUICE GARAGE SL
-TEL;TYPE=WORK,VOICE;X-ABLabel=Marc - Direccion e Innovacion:+34637408287
-TEL;TYPE=WORK,VOICE;X-ABLabel=Ruben - Direccion Comercial:+34682360380
-TEL;TYPE=WORK,VOICE;X-ABLabel=Administracion:+34604486190
-EMAIL;TYPE=WORK:admin@juicegarage.es
-URL:https://www.sucs.es
+item1.TEL:+34637408287
+item1.X-ABLabel:Marc - Direccion e Innovacion
+item2.TEL:+34682360380
+item2.X-ABLabel:Ruben - Direccion Comercial
+item3.TEL:+34604486190
+item3.X-ABLabel:Administracion
+EMAIL;TYPE=INTERNET,WORK:admin@juicegarage.es
+item4.URL:https://www.juicegarage.es/
+item4.X-ABLabel:JUICE GARAGE
+item5.URL:https://www.sucs.es/
+item5.X-ABLabel:SUCS
+item6.URL:https://www.ravens.es/
+item6.X-ABLabel:RAVENS
+NOTE:Tarjeta digital y catalogo disponibles en JUICE GARAGE.
 END:VCARD
