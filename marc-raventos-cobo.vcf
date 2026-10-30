@@ -13,9 +13,5 @@ item2.URL:https://www.sucs.es/
 item2.X-ABLabel:SUCS
 item3.URL:https://www.ravens.es/
 item3.X-ABLabel:RAVENS
-item4.URL:https://lourdeshp6.github.io/juicegarage-vcards/
-item4.X-ABLabel:Tarjeta digital
-item5.URL:https://juice-garage-catalogo.fond-clock-0427.chatgpt.site/
-item5.X-ABLabel:Catalogo digital
-NOTE:JUICE GARAGE: https://www.juicegarage.es/\nSUCS: https://www.sucs.es/\nRAVENS: https://www.ravens.es/\nTarjeta digital: https://lourdeshp6.github.io/juicegarage-vcards/\nCatalogo digital: https://juice-garage-catalogo.fond-clock-0427.chatgpt.site/
+NOTE:Tarjeta digital y catalogo disponibles en JUICE GARAGE.
 END:VCARD
