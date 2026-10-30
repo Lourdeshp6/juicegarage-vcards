@@ -109,12 +109,16 @@
 
     .button {
       display: block;
+      width: 100%;
       padding: 15px;
       border: 1px solid #ddd;
       border-radius: 12px;
       background: #f7f7f7;
+      color: #111;
       text-align: center;
+      font: inherit;
       font-weight: 700;
+      cursor: pointer;
       overflow-wrap: anywhere;
     }
 
@@ -139,6 +143,28 @@
 
     .primary:hover {
       background: #333;
+    }
+
+    .install-help {
+      display: none;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #fafafa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .install-help.visible {
+      display: block;
+    }
+
+    .install-help p {
+      margin: 0 0 10px;
+    }
+
+    .install-help p:last-child {
+      margin-bottom: 0;
     }
 
     .foot {
@@ -241,6 +267,28 @@
       </section>
 
       <section class="section">
+
+        <button class="button"
+                id="install-button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="install-help">
+          ▣ AÑADIR A PANTALLA DE INICIO
+        </button>
+
+        <div class="install-help"
+             id="install-help"
+             role="region"
+             aria-label="Instrucciones para pantalla de inicio">
+
+          <p id="install-message"></p>
+
+          <p>
+            Así tendrás acceso directo a esta tarjeta
+            digital desde la pantalla de inicio de tu móvil.
+          </p>
+        </div>
+
         <a class="button primary"
            href="./ruben-queralt-verdu.vcf"
            download="ruben-queralt-verdu.vcf">
@@ -259,5 +307,59 @@
 
     </article>
   </main>
+
+  <script>
+    let deferredInstallPrompt = null;
+
+    window.addEventListener("beforeinstallprompt", function(event) {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+    });
+
+    const installButton = document.getElementById("install-button");
+    const installHelp = document.getElementById("install-help");
+    const installMessage = document.getElementById("install-message");
+
+    installButton.addEventListener("click", async function() {
+      if (deferredInstallPrompt) {
+        const promptEvent = deferredInstallPrompt;
+        deferredInstallPrompt = null;
+        promptEvent.prompt();
+        await promptEvent.userChoice;
+        return;
+      }
+
+      if (window.matchMedia("(display-mode: standalone)").matches ||
+          window.navigator.standalone === true) {
+        installMessage.textContent =
+          "Esta tarjeta ya está abierta desde la pantalla de inicio.";
+      } else {
+        const ua = navigator.userAgent;
+        const isIOS = /iPhone|iPad|iPod/.test(ua);
+        const isAndroid = /Android/.test(ua);
+
+        if (isIOS) {
+          installMessage.textContent =
+            "En iPhone: abre esta tarjeta en Safari, pulsa Compartir " +
+            "(cuadrado con flecha hacia arriba), selecciona " +
+            "'Añadir a pantalla de inicio' y confirma con 'Añadir'. " +
+            "Si has abierto el QR desde la cámara o WhatsApp, " +
+            "abre primero el enlace en Safari.";
+        } else if (isAndroid) {
+          installMessage.textContent =
+            "En Android: abre esta tarjeta en Chrome, pulsa el menú " +
+            "de los tres puntos y selecciona 'Añadir a pantalla de inicio' " +
+            "o 'Instalar aplicación', según el navegador.";
+        } else {
+          installMessage.textContent =
+            "Abre esta tarjeta en el navegador de tu móvil y utiliza " +
+            "la opción 'Añadir a pantalla de inicio' del menú.";
+        }
+      }
+
+      const visible = installHelp.classList.toggle("visible");
+      installButton.setAttribute("aria-expanded", String(visible));
+    });
+  </script>
 </body>
 </html>
